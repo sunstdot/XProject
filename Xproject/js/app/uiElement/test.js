@@ -3,4 +3,5 @@ xp.mod.define("app.uiElement.test",function(){
 	module.test = function(){
 		console.log("2222");
 	}
+	return module;
 })

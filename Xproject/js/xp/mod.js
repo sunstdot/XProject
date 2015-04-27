@@ -14,8 +14,8 @@
  * 注意：如果模块在loadDepend上有循环依赖，则会加载后，无限等待
  * 调用具体模块的函数时，需要显示的调用，xp.mod.require([mod1, mod2], callback);
  */
-
-xp = (function (xp) {
+xp = {};
+(function () {
     "use strict";
     /** @exports module as xp.mod */
     var get, index, parseUrl, absUrl, modCheck, modInit, waitNext, callNext, zipArray, realPath, requireWindow, requireWorker, depend, okIndex = 1, module = {},
@@ -482,4 +482,4 @@ xp = (function (xp) {
 
     xp.mod = module;
     return xp;
-}(xp || {}));
+}());

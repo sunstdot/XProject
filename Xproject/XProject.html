@@ -6,7 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>Bootstrap 101 Template</title>
-  	<script type="text/javascript" src="js/xp/mod.js"></script>
+    
+    
+    <script type="text/javascript" src="js/xp/mod.js"></script>
+    <script type="application/javascript">
+    	xp.config = xp.config || {};
+    	xp.config.libPath = "D:/XProject/Xproject/js/xp"
+    </script>
+    <script type="text/javascript" src="js/mod_config.js"></script>
+  	
     <!-- Bootstrap -->
     <link rel="icon" href="../../favicon.ico">
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -22,13 +30,30 @@
   </head>
   <body youdao="bind">
 	<div class="site-wrapper">
-      <div class="mainWrapper"></div>
+      <div class="mainWrapper">
+      		<div class="leftCon"></div>
+      		<div class="centerCon">
+             <div class="header">
+               <div class="hTitle">维基百科，自由的百科全书</div>
+             </div>
+             <div class="content">
+              <div class="outerWrapper">
+               <input id="nameInput"/>
+               <input id="pwd"/>
+               <button id="confirm" class="btn" onclick="testConfirm()">测试</button>
+             </div>
+             </div>
+             <div class="bottom"></div>
+          </div>         
+      		<div class="rightCon"></div>
+      </div>
     </div>
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    
+    
     <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="js/external/bootstrap.min.js"></script>
     <script src="js/XProject.js" type="application/javascript"></script>
+    <script src="js/app/uiElement/test.js" type="application/javascript"></script>
     <script type="text/javascript">
         xp.mod.require(["app.uiElement.test"],function(){
             console.log("111");
@@ -36,5 +61,6 @@
         })
 
     </script>
+    <script type="application/javascript" src="js/main/main.js"></script>
   </body>
 </html>

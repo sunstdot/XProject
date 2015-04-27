@@ -1,6 +1,77 @@
 div.mainWrapper{
 	width: 100%;
 	height: 100%;
+	display:flex;
+	display:-webkit-flex;
 	position: absolute;
-	background-color: greenyellow;
+	background-color: lightgrey;
+	font-family: 'Open Sans','Helvetica Neue',Arial,'Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
+}
+div.leftCon{
+	-webkit-flex-grow:2;
+	flex-grow:2;
+	background-color: lightred;
+}
+div.centerCon{
+	-webkit-flex-grow:8;
+	flex-grow:8;
+	background-color: lightyellow;
+
+	display:flex;
+	display:-webkit-flex;
+	-webkit-flex-direction:column;
+	flex-direction:column;
+}
+div.rightCon{
+	-webkit-flex-grow:2;
+	flex-grow:2;
+	background-color: lightblue;
+}
+div.header{
+	-webkit-flex-grow:2;
+	flex-grow:2;
+	display:-webkit-flex;
+	-webkit-align-items:center;
+	-webkit-justify-content:center;
+	background-color:lightgreen;
+}
+div.content{
+	-webkit-flex-grow:10;
+	flex-grow:10;
+}
+div.bottom{
+	-webkit-flex-grow:2;
+	flex-grow:2;
+	background-color:pink;
+}
+div.hTitle{
+	font-size: 30px;
+}
+div.outerWrapper{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+input#nameInput{
+	position:absolute;
+	top: 100px;
+	left:100px;
+	width:100px;
+	height:30px;
+}
+input#pwd{
+	position:absolute;
+	top: 150px;
+	left:100px;
+	width:100px;
+	height:30px;
+}
+button.btn{
+	position:absolute;
+	top: 200px;
+	left:100px;
+	width:100px;
+	height:30px;
+	font-size: 18px;
+	line-height: 20px;
 }
