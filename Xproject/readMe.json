@@ -1,0 +1,4 @@
+关于目录结构说明：
+1.plugin内部是html文件，代表一个个插件或者功能结构；
+2.static是plugin内部html所需要的css和js文件；
+3.js文件是功能模块，app是自定义的模块，external是引用的外部源js库等，sea-modules是本模块用的sea.js，xp是全局的文件级别比app高

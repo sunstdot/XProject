@@ -12,3 +12,11 @@ function testConfirm(){
 		app.connection.sendNetMsg({name:name,pwd:pwd});
 	}
 };
+
+function loadingWinDemo(){
+	var imgDom = document.getElementById("mainWrapper");
+	//显示加载图片
+};
+(function initWrapper(){
+	loadingWinDemo();
+}());
