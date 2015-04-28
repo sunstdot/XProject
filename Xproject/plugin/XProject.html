@@ -8,17 +8,21 @@
     <title>Bootstrap 101 Template</title>
     
     
-    <script type="text/javascript" src="js/xp/mod.js"></script>
+    <script type="text/javascript" src="../js/xp/mod.js"></script>
     <script type="application/javascript">
     	xp.config = xp.config || {};
-    	xp.config.libPath = "E:/XProject/Xproject/js/xp"
+    	xp.config.libPath = "D:/XProject/Xproject/js/xp"
     </script>
-    <script type="text/javascript" src="js/mod_config.js"></script>
+    <script type="text/javascript" src="../js/xp/mod_config.js"></script>
   	
+    <script src="../js/external/rainyday.js" type="text/javascript"></script>
+    
+    
+
     <!-- Bootstrap -->
     <link rel="icon" href="../../favicon.ico">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/XProject.css" rel="stylesheet">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/XProject.css" rel="stylesheet">
     
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -28,11 +32,15 @@
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body youdao="bind">
+  <body youdao="bind" onload="run();">
 	<div class="site-wrapper">
+      <img id="background" alt="background" src="" />
+      <canvas width="1920" height="1200" style="position: absolute; top: 0px; left: 0px;"></canvas>
       <div class="mainWrapper">
-      		<div id="windemo" class="leftCon">
-                
+      		<div class="leftCon">
+                <div class="menu">首页</div>
+                <div class="menu">图片集</div>
+                <div class="menu">关于作者</div>
           </div>
       		<div class="centerCon">
              <div class="header">
@@ -54,9 +62,9 @@
     
     
     <script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/external/bootstrap.min.js"></script>
-    <script src="js/XProject.js" type="application/javascript"></script>
-    <script src="js/app/uiElement/test.js" type="application/javascript"></script>
+    <script src="../js/external/bootstrap.min.js"></script>
+    <script src="../js/xp/XProject.js" type="application/javascript"></script>
+    <script src="../js/app/uiElement/test.js" type="application/javascript"></script>
     <script type="text/javascript">
         xp.mod.require(["app.uiElement.test"],function(){
             console.log("111");
@@ -64,6 +72,22 @@
         })
 
     </script>
-    <script type="application/javascript" src="js/main/main.js"></script>
+    <script>
+        function run(){
+           var img = document.getElementById("background");
+           var image = new Image();
+           image.onload = function(){
+              var engine = new RainyDay({
+                  image:this,
+                  gravityAngle:Math.PI/9
+              },document.getElementById("canvas"));
+              engine.trail = engine.TRAIL_SMUDGE;
+              engine.rain([[1,0,1000],[3,3,1]],100);
+           };
+           image.crossOrigin = 'anonymous';
+           image.src = "http://i.imgur.com/VuX2Nf0.jpg";
+        }
+    </script>
+    <script type="application/javascript" src="../js/main/main.js"></script>
   </body>
 </html>
